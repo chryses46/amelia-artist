@@ -29,8 +29,8 @@ body {
     body .title ul a {
       text-decoration: none;
       color: inherit; }
-    body .title ul a:visited {
-      color: inherit; }
+      body .title ul a:visited {
+        color: inherit; }
   body .port .port-head {
     background-color: #e0e0eb; }
     body .port .port-head div {
@@ -94,6 +94,16 @@ body {
     background-color: #fff;
     text-align: center;
     min-height: 4em; }
+    body .blog .blog-block .blog-title {
+      font-family: Rakkas, cursive; }
+    body .blog .blog-block .blog-date {
+      font-style: italic;
+      margin: -7px auto 10px auto; }
+    body .blog .blog-block .blog-entry {
+      text-align: justify;
+      text-indent: 2em;
+      margin: 0 auto;
+      padding: 0 34px; }
   body .foot {
     text-align: center;
     background-color: #e0e0eb; }
@@ -102,11 +112,13 @@ body {
       font-size: 22px;
       display: inline;
       color: #b22222; }
+      body .foot li:nth-child(2) {
+        padding: 0 20px; }
     body .foot a {
       text-decoration: none;
       color: inherit; }
-    body .foot a:visited {
-      color: inherit; }
+      body .foot a:visited {
+        color: inherit; }
     body .foot p {
       padding: 0 0 10px 0;
       margin: 0 auto; }
