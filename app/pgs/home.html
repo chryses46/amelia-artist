@@ -1,6 +1,7 @@
 <div>
     <section class="title" id="home">
         <h1>Amelia</h1>
+        <h2>Model | Actor | Singer</h2>
         <div>
             <ul>
                 <li><a href="https://www.instagram.com/abigail_ladona/"><i class="fa fa-instagram"/></a></li>
@@ -12,21 +13,21 @@
     <section class="port container-fluid">
     	<header class="port-head row" id="portHead">
     		<div class="col-xs-10"><h1>Portfolio</h1></div>
-    		<div class="col-xs-2"><i class="fa fa-arrow-circle-up" ng-click="collapse();"/></div>
+    		<div class="col-xs-2 arrow-holder"><i class="fa fa-arrow-circle-up" ng-click="collapse();"/></div>
     	</header>
         <section class="port-img-block row" id="portBlock">
             <div class="col-xs-4 img-hold" ng-repeat="img in portImages">
-                <img class="port-img" src="{{img.loc}}" title="{{img.photog}}"/>
+                <img class="port-img" src="{{img.loc}}" title="Photographer: {{img.photog}}"/>
             </div>
         </section>
     </section>
     <section class="blog container-fluid">
         <header class="blog-head row" id="blogHead">
             <div class="col-xs-10"><h1>Blog</h1></div>
-            <div class="col-xs-2"><i class="fa fa-arrow-circle-up" ng-click="collapse();"/></div>
+            <div class="col-xs-2 arrow-holder"><i class="fa fa-arrow-circle-up" ng-click="collapse();"/></div>
         </header>
         <section class="blog-block row" id="blogBlock">
-            <h1>More Content Coming Soon!</h1>
+            <h1>Coming Soon!</h1>
             <div class="col-xs-12 insta-feed">
             </div>
             <div class="col-xs-12 fb-feed">
