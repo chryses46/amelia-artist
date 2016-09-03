@@ -22,6 +22,15 @@ angular.module('amelia')
         		photog: 'Logan Grey'
         	}];
 
+        //Future Blog Post object - need JSON and data extraction for links
+
+   /*     $scope.blogEntries = [{
+            title: 'Publication!',
+            date: '9/2/2016',
+            post: 'I'm very excited and proud to announce that I have been published in the August/ September issue of <a href="http://imagesmagazine.net/aug-sept-2016/">Images Magazine</a>! Take a look at the amazing work that Logan Grey did on the featured shoots!'
+        }]
+    */
+    
         //Eventually this will load images from BLOBS in DB
         $scope.getImages = function() {
         	return ContentService.getImages();

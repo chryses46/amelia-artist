@@ -18,6 +18,8 @@ $icon-font: 23pt
   text-align: center
   display: flex
   justify-content: center
+  @media screen and (min-width: 780px)
+    width: 100%
 
 =head-i
   font-size: 29pt
@@ -29,17 +31,25 @@ $icon-font: 23pt
   font-family: $Shrikhand
   font-size: 29pt
   color: #234567
+  @media screen and (min-width: 780px)
+    right: 0
+
+=blog-title
+  font-family: $Rakkas
+
+=blog-entry
+  text-align: justify
+  text-indent: 2em
+  margin: 0 auto
+  padding: 0 34px
 
 h1, ul 
   margin: 0 auto 
 
-@media only screen and (max-width: 359)
-
-
-
 /*Home page styles*/
 body
   background-color: #000
+  min-height: 100%
   
 
   .title
@@ -51,6 +61,11 @@ body
       font-family: $Rakkas
       font-size: 62pt
       color: #234567
+
+    h2
+      font-size: 18px
+      margin: 0 auto 18px auto
+      font-family: $Rakkas
 
     ul 
       li
@@ -65,8 +80,8 @@ body
       a
         +social-a
 
-      a:visited
-        +social-visited
+        &:visited
+          +social-visited
 
 
 
@@ -77,12 +92,19 @@ body
       div
         +head-div
 
+        @media screen and (min-width: 780px)
+          width: 100%
+
         h1
           +head-h1
+
+      .arrow-holder
         i
           +head-i
-          
 
+        @media screen and (min-width: 780px)
+          display: none
+          
     .port-img-block
       background-color: #fff
 
@@ -103,13 +125,28 @@ body
 
         h1
           +head-h1
+
+      .arrow-holder
         i
           +head-i
+
+        @media screen and (min-width: 780px)
+          display: none
 
     .blog-block
       background-color: #fff
       text-align: center
       min-height: 4em
+
+      .blog-title
+        +blog-title
+
+      .blog-date
+        font-style: italic
+        margin: -7px auto 10px auto
+
+      .blog-entry
+        +blog-entry
 
       .insta-feed
 
@@ -117,7 +154,30 @@ body
 
       .twitter-feed
 
-      .entry
+  .foot
+    text-align: center
+    background-color: #e0e0eb
+
+    li
+      list-style: none
+      font-size: 22px
+      display: inline
+      color: #b22222
+
+      &:nth-child(2)
+        padding: 0 20px
+    a
+      +social-a
+
+      &:visited
+        +social-visited
+    p
+      padding: 0 0 10px 0
+      margin: 0 auto
+
+
+
+
 
 
 

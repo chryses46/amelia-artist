@@ -5,7 +5,8 @@ h1, ul {
 
 /*Home page styles */
 body {
-  background-color: #000; }
+  background-color: #000;
+  min-height: 100%; }
   body .title {
     width: 100%;
     background-color: #fff;
@@ -14,6 +15,10 @@ body {
       font-family: Rakkas, cursive;
       font-size: 62pt;
       color: #234567; }
+    body .title h2 {
+      font-size: 18px;
+      margin: 0 auto 18px auto;
+      font-family: Rakkas, cursive; }
     body .title ul li {
       list-style: none;
       display: inline-block;
@@ -24,23 +29,35 @@ body {
     body .title ul a {
       text-decoration: none;
       color: inherit; }
-    body .title ul a:visited {
-      color: inherit; }
+      body .title ul a:visited {
+        color: inherit; }
   body .port .port-head {
     background-color: #e0e0eb; }
     body .port .port-head div {
       text-align: center;
       display: flex;
       justify-content: center; }
+      @media screen and (min-width: 780px) {
+        body .port .port-head div {
+          width: 100%; } }
+      @media screen and (min-width: 780px) {
+        body .port .port-head div {
+          width: 100%; } }
       body .port .port-head div h1 {
         position: relative;
         right: -12%;
         font-family: Shrikhand, cursive;
         font-size: 29pt;
         color: #234567; }
-      body .port .port-head div i {
-        font-size: 29pt;
-        line-height: 1em; }
+        @media screen and (min-width: 780px) {
+          body .port .port-head div h1 {
+            right: 0; } }
+    body .port .port-head .arrow-holder i {
+      font-size: 29pt;
+      line-height: 1em; }
+    @media screen and (min-width: 780px) {
+      body .port .port-head .arrow-holder {
+        display: none; } }
   body .port .port-img-block {
     background-color: #fff; }
     body .port .port-img-block .img-hold {
@@ -55,18 +72,55 @@ body {
       text-align: center;
       display: flex;
       justify-content: center; }
+      @media screen and (min-width: 780px) {
+        body .blog .blog-head div {
+          width: 100%; } }
       body .blog .blog-head div h1 {
         position: relative;
         right: -12%;
         font-family: Shrikhand, cursive;
         font-size: 29pt;
         color: #234567; }
-      body .blog .blog-head div i {
-        font-size: 29pt;
-        line-height: 1em; }
+        @media screen and (min-width: 780px) {
+          body .blog .blog-head div h1 {
+            right: 0; } }
+    body .blog .blog-head .arrow-holder i {
+      font-size: 29pt;
+      line-height: 1em; }
+    @media screen and (min-width: 780px) {
+      body .blog .blog-head .arrow-holder {
+        display: none; } }
   body .blog .blog-block {
     background-color: #fff;
     text-align: center;
     min-height: 4em; }
+    body .blog .blog-block .blog-title {
+      font-family: Rakkas, cursive; }
+    body .blog .blog-block .blog-date {
+      font-style: italic;
+      margin: -7px auto 10px auto; }
+    body .blog .blog-block .blog-entry {
+      text-align: justify;
+      text-indent: 2em;
+      margin: 0 auto;
+      padding: 0 34px; }
+  body .foot {
+    text-align: center;
+    background-color: #e0e0eb; }
+    body .foot li {
+      list-style: none;
+      font-size: 22px;
+      display: inline;
+      color: #b22222; }
+      body .foot li:nth-child(2) {
+        padding: 0 20px; }
+    body .foot a {
+      text-decoration: none;
+      color: inherit; }
+      body .foot a:visited {
+        color: inherit; }
+    body .foot p {
+      padding: 0 0 10px 0;
+      margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

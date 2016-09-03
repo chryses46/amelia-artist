@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" src="assets/img/icon.jpg">
-    <title>Amelia: Artist - {{title}}</title>
+    <title>Amelia | Artist</title>
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Rakkas|Shrikhand|Yatra+One" rel="stylesheet">
@@ -24,12 +24,14 @@
     <!-- Configs -->
     <script src="app/config/uiRouter.config.js"></script>
     <!-- Directives -->
+    <script src="app/dirs/footer.directive.js"></script>
     <!-- Services -->
     <script src="app/svc/content.service.js"></script>
 </head>
 
 <body>
     <div ui-view></div>
+    <div footer> </div>
 </body>
 
 </html>
