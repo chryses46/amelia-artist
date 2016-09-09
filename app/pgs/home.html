@@ -17,7 +17,10 @@
     	</header>
         <section class="port-img-block row" id="portBlock">
             <div class="col-xs-4 img-hold" ng-repeat="img in portImages">
-                <img class="port-img" src="{{img.loc}}" title="Photographer: {{img.photog}}"/>
+                <img class="port-img" src="{{img.loc}}" title="Photographer: {{img.photog}}" ng-click="photoslider()"/>
+            </div>
+            <div id="photoSlider" class="photo-slider">
+                
             </div>
         </section>
     </section>

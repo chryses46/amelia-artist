@@ -39,6 +39,10 @@ angular.module('amelia')
         $scope.collapse = function(){
             console.log("clicked");
         };
+
+        $scope.photoslider = function(){
+            
+        }
  
 
     })
