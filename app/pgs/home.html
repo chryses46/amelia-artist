@@ -1,37 +1,74 @@
 <div>
     <section class="title" id="home">
         <h1>Amelia</h1>
-        <h2>Model | Actor | Singer</h2>
+        <h2><a >Model</a> | Actor | Singer</h2>
         <div>
             <ul>
-                <li><a href="https://www.instagram.com/abigail_ladona/"><i class="fa fa-instagram"/></a></li>
-                <li><a href="https://www.facebook.com/Abigail.Ladona/"><i class="fa fa-facebook"/></a></li>
-                <li><a href="https://twitter.com/AbbyGirl96"><i class="fa fa-twitter"/></a></li>
+                <li>
+                    <a href="https://www.instagram.com/abigail_ladona/"><i class="fa fa-instagram" /></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/Abigail.Ladona/"><i class="fa fa-facebook" /></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/AbbyGirl96"><i class="fa fa-twitter" /></a>
+                </li>
             </ul>
         </div>
     </section>
     <section class="port container-fluid">
-    	<header class="port-head row" id="portHead">
-    		<div class="col-xs-10"><h1>Portfolio</h1></div>
-    		<div class="col-xs-2 arrow-holder"><i class="fa fa-arrow-circle-up" ng-click="collapse();"/></div>
-    	</header>
-        <section class="port-img-block row" id="portBlock">
-            <div class="col-xs-4 img-hold" ng-repeat="img in portImages">
-                <img class="port-img" src="{{img.loc}}" title="Photographer: {{img.photog}}"/>
+        <header class="port-head row" id="portHead">
+            <a href="#/portfolio">
+                <div class="col-xs-10">
+                    <h1>Portfolio</h1></div>
+                <div class="col-xs-2 arrow-holder"><i class="fa fa-arrow-circle-up" ng-click="collapse();" /></div>
+            </a>    
+        </header>
+        <section  id="portBlock" >
+            <div class="port-img-block row">
+                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[0].loc}}" title="Photographer: {{portImages[0].photog}}" /></div>
+                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[1].loc}}" title="Photographer: {{portImages[1].photog}}" /></div>
+                <div class="col-xs-4">
+                    <div class="row">
+                        <div class="col-xs-12 img-hold">
+                            <img class="port-img" src="{{portImages[2].loc}}" title="Photographer: {{portImages[2].photog}}" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 img-hold">
+                            <img class="port-img" src="{{portImages[3].loc}}" title="Photographer: {{portImages[3].photog}}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="port-img-block row">
+                <div class="col-xs-4">
+                    <div class="row">
+                        <div class="col-xs-12 img-hold">
+                            <img class="port-img" src="{{portImages[4].loc}}" title="Photographer: {{portImages[4].photog}}" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 img-hold">
+                            <img class="port-img" src="{{portImages[5].loc}}" title="Photographer: {{portImages[5].photog}}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[6].loc}}" title="Photographer: {{portImages[6].photog}}" /></div>
+                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[7].loc}}" title="Photographer: {{portImages[7].photog}}" /></div>
             </div>
         </section>
     </section>
     <section class="blog container-fluid">
         <header class="blog-head row" id="blogHead">
-            <div class="col-xs-10"><h1>Blog</h1></div>
-            <div class="col-xs-2 arrow-holder"><i class="fa fa-arrow-circle-up" ng-click="collapse();"/></div>
+            <div class="col-xs-10">
+                <h1>Blog</h1></div>
+            <div class="col-xs-2 arrow-holder"><i class="fa fa-arrow-circle-up" ng-click="collapse();" /></div>
         </header>
         <section class="blog-block row" id="blogBlock">
-            
             <h1 class="blog-title"> Publication!</h1>
             <p class="blog-date">Posted: 9/2/2016</p>
             <p class="blog-entry">I'm very excited and proud to announce that I have been published in the August/ September issue of <a href="http://imagesmagazine.net/aug-sept-2016/">Images Magazine</a>! Take a look at the amazing work that Logan Grey did on the featured shoots!</p>
-            
             <div class="col-xs-12 insta-feed">
             </div>
             <div class="col-xs-12 fb-feed">
@@ -43,3 +80,19 @@
         </section>
     </section>
 </div>
+
+<!-- Photo Slider Code 
+            <script type="text/ng-template" id="photoSlider">
+                <div class="photo-slider">
+                    <img class="slide-image" ng-repeat="img in portImages" src="{{img.loc}}" title="Photographer: {{img.photog}}" ng-hide="!isCurrentSlideIndex($index)" ng-swipe-left="prevSlide();" ng-swipe-right="nextSlide();" />
+                    <nav class="slide-nav">
+                        <div class="dots-wrap">
+                            <ul class="dots">
+                                <li class="dot" ng-repeat="img in portImages">
+                                    <a ng-class="{'active':isCurrentSlideIndex($index)}" ng-click="setCurrentSlideIndex($index);">Photographer: {{img.photog}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+           </script>-->

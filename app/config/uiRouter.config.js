@@ -8,9 +8,9 @@ angular.module('amelia')
                 title: 'Home',
                 templateUrl: 'app/pgs/home.html'
             })
-            .state('privacy', {
-                url: '/privacy-policy',
-                title: 'Privacy Policy',
-                templateUrl: 'app/pgs/privacy-policy.html'
+            .state('portfolio', {
+                url: '/portfolio',
+                title: 'Portfolio',
+                templateUrl: 'app/pgs/portfolio.html'
             })
     })
