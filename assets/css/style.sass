@@ -46,6 +46,14 @@ $icon-font: 23pt
 h1, ul 
   margin: 0 auto 
 
+a
+  text-decoration: none
+  color: #000
+
+  &:visited
+    text-decoration: none
+    color: #000
+
 /*Home page styles*/
 body
   background-color: #000
@@ -116,6 +124,64 @@ body
           max-width: 100%
           max-height: 100%
 
+      .photo-slider
+        width: 100%
+        height: 23em
+        display: flex
+        justify-content: center
+        border: 7px solid #e0e0eb
+        margin: .5em auto
+
+        .slide-image
+          object-fit: contain
+          width: 100%
+
+        .slide-nav
+          text-align: center
+          display: block
+          position: absolute
+          z-index: 1002
+          left: 0
+          bottom: -206px
+          right: 0
+          height: 13px
+
+          .dots-wrap
+            margin: 0 auto
+            width: 100%
+
+            ul
+              margin: 0
+              width: 100%
+
+              .dot
+                position: relative
+                margin: 0 8px
+                width: 12px
+                height: 12px
+                display: inline
+
+                a
+                  position: absolute
+                  width: 6px
+                  height: 6px
+                  text-indent: 100%
+                  white-space: nowrap
+                  overflow: hidden
+                  background: #FFF
+                  border: 1px solid transparent
+                  outline: none
+                  -webkit-box-shadow: none
+                  -moz-box-shadow: none
+                  box-shadow: none
+                  -webkit-border-radius: 50%
+                  -moz-border-radius: 50%
+                  border-radius: 50%
+                  -webkit-transition: background-color 0.25s, border-color 0.25s
+                  -moz-transition: background-color 0.25s, border-color 0.25s
+                  transition: background-color 0.25s, border-color 0.25s
+
+
   .blog
     .blog-head
       background-color: #e0e0eb
@@ -147,12 +213,6 @@ body
 
       .blog-entry
         +blog-entry
-
-      .insta-feed
-
-      .fb-feed
-
-      .twitter-feed
 
   .foot
     text-align: center
