@@ -1,8 +1,13 @@
 angular.module('amelia')
-    .controller('HomeController', function($location, $rootScope, $scope, ngDialog) {
+    .controller('HomeController', function($stateParams, $location, $rootScope, $scope, ngDialog) {
 
-        $scope.currentIndex = 0;
-
+        
+        if ($stateParams.id > 0 ){
+            $scope.currentIndex = $stateParams.id;
+            console.log($stateParams.id);
+        }else $scope.currentIndex = 0;
+        
+        console.log($scope.currentIndex)
 
         //Array of imgs for Portfolio Section
         $scope.portImages = [{
@@ -42,7 +47,7 @@ angular.module('amelia')
         };
 
         $scope.isCurrentSlideIndex = function(index){
-            return $scope.currentIndex === index;
+            return $scope.currentIndex == index;
         };
             
         $scope.prevSlide = function(){
@@ -86,8 +91,7 @@ angular.module('amelia')
 
         //Go to Portfolio page w/image index
         $scope.portNav = function(index){
-            $location.path('/portfolio');
-            $scope.setCurrentSlideIndex(index);
+            $location.path('/portfolio' + index);
         }
 
     })
