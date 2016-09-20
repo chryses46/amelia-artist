@@ -9,8 +9,10 @@ angular.module('amelia')
                 templateUrl: 'app/pgs/home.html'
             })
             .state('portfolio', {
-                url: '/portfolio',
+                url: '/portfolio:id',
+                controller: 'HomeController',
                 title: 'Portfolio',
-                templateUrl: 'app/pgs/portfolio.html'
+                templateUrl: 'app/pgs/portfolio.html',
+                params: {id: "0"}
             })
-    })
+    })    

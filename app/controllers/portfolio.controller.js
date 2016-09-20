@@ -1,16 +1,10 @@
 angular.module('amelia')
-    .controller('HomeController', function($stateParams, $location, $rootScope, $scope, ngDialog) {
+    .controller('PortfolioController', function($rootScope, $scope, ngDialog) {
 
+    	$scope.currentIndex = 0;
         
-        if ($stateParams.id > 0 ){
-            $scope.currentIndex = $stateParams.id;
-            console.log($stateParams.id);
-        }else $scope.currentIndex = 0;
-        
-        console.log($scope.currentIndex)
 
-        //Array of imgs for Portfolio Section
-        $scope.portImages = [{
+    	$scope.portImages = [{
         		loc: '/assets/img/portImgs/newSet1.jpg',
         		photog: 'Logan Grey'
         	},{ 
@@ -36,39 +30,21 @@ angular.module('amelia')
                 photog: 'Logan Grey'
             }];
 
-        
-
-        $scope.openSlider= function(index){
-            $scope.currentIndex = index;
-        }
-
-        $scope.setCurrentSlideIndex = function(index){
+    	$scope.setCurrentSlideIndex = function(index){
             $scope.currentIndex = index;
         };
 
         $scope.isCurrentSlideIndex = function(index){
-            return $scope.currentIndex == index;
+            return $scope.currentIndex === index;
         };
             
         $scope.prevSlide = function(){
-            $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.portImages.length - 1;
-        };
-
-        $scope.nextSlide = function(){
             $scope.currentIndex = ($scope.currentIndex < $scope.portImages.length -1) ? ++$scope.currentIndex : 0;
         };
 
-        /* Eventually this will load images from BLOBS in DB
-        $scope.getImages = function() {
-            return ContentService.getImages();
+        $scope.nextSlide = function(){
+            $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.portImages.length - 1;
         };
-        */
-
-        /* Eventually this will collapse mobile sections by clicking the up arrow. Maybe
-        $scope.collapse = function(){
-            console.log("clicked");
-        };
-        */
 
         $scope.changeStyle = function(){
             if ($('#cssId').attr('href') == 'assets/css/style.css'){
@@ -79,19 +55,6 @@ angular.module('amelia')
                 console.log($('#cssId').attr('href'));
             }
             
-        }
-
-         //Scroll to specific div
-        $scope.gotoAnchor = function(div_id) {
-            var old = $location.hash();
-            $location.hash(div_id);
-            anchorSmoothScroll.scrollTo(div_id);
-            $location.hash(old);
-        };
-
-        //Go to Portfolio page w/image index
-        $scope.portNav = function(index){
-            $location.path('/portfolio' + index);
         }
 
     })

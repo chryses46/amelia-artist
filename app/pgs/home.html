@@ -1,17 +1,18 @@
 <div>
     <section class="title" id="home">
         <h1>Amelia</h1>
-        <h2><a >Model</a> | Actor | Singer</h2>
+        <h2><a href="#/portfolio">Model</a> | Actor | Singer</h2>
+        <i class="fa fa-lightbulb-o" ng-click="changeStyle();" />
         <div>
             <ul>
                 <li>
-                    <a href="https://www.instagram.com/abigail_ladona/"><i class="fa fa-instagram" /></a>
+                    <a href="https://www.instagram.com/abigail_ladona/" target="_blank"><i class="fa fa-instagram" /></a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/Abigail.Ladona/"><i class="fa fa-facebook" /></a>
+                    <a href="https://www.facebook.com/Abigail.Ladona/" target="_blank"><i class="fa fa-facebook" /></a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/AbbyGirl96"><i class="fa fa-twitter" /></a>
+                    <a href="https://twitter.com/AbbyGirl96" target="_blank"><i class="fa fa-twitter" /></a>
                 </li>
             </ul>
         </div>
@@ -22,21 +23,21 @@
                 <div class="col-xs-10">
                     <h1>Portfolio</h1></div>
                 <div class="col-xs-2 arrow-holder"><i class="fa fa-arrow-circle-up" ng-click="collapse();" /></div>
-            </a>    
+            </a>
         </header>
-        <section  id="portBlock" >
+        <section id="portBlock">
             <div class="port-img-block row">
-                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[0].loc}}" title="Photographer: {{portImages[0].photog}}" /></div>
-                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[1].loc}}" title="Photographer: {{portImages[1].photog}}" /></div>
+                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[0].loc}}" title="Photographer: {{portImages[0].photog}}" ng-click="portNav(0);" /></div>
+                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[1].loc}}" title="Photographer: {{portImages[1].photog}}" ng-click="portNav(1);" /></div>
                 <div class="col-xs-4">
                     <div class="row">
                         <div class="col-xs-12 img-hold">
-                            <img class="port-img" src="{{portImages[2].loc}}" title="Photographer: {{portImages[2].photog}}" />
+                            <img class="port-img" src="{{portImages[2].loc}}" title="Photographer: {{portImages[2].photog}}" ng-click="portNav(2);" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 img-hold">
-                            <img class="port-img" src="{{portImages[3].loc}}" title="Photographer: {{portImages[3].photog}}" />
+                            <img class="port-img" src="{{portImages[3].loc}}" title="Photographer: {{portImages[3].photog}}" ng-click="portNav(3);" />
                         </div>
                     </div>
                 </div>
@@ -45,17 +46,17 @@
                 <div class="col-xs-4">
                     <div class="row">
                         <div class="col-xs-12 img-hold">
-                            <img class="port-img" src="{{portImages[4].loc}}" title="Photographer: {{portImages[4].photog}}" />
+                            <img class="port-img" src="{{portImages[4].loc}}" title="Photographer: {{portImages[4].photog}}" ng-click="portNav(4);" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 img-hold">
-                            <img class="port-img" src="{{portImages[5].loc}}" title="Photographer: {{portImages[5].photog}}" />
+                            <img class="port-img" src="{{portImages[5].loc}}" title="Photographer: {{portImages[5].photog}}" ng-click="portNav(5);" />
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[6].loc}}" title="Photographer: {{portImages[6].photog}}" /></div>
-                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[7].loc}}" title="Photographer: {{portImages[7].photog}}" /></div>
+                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[6].loc}}" title="Photographer: {{portImages[6].photog}}" ng-click="portNav(6);" /></div>
+                <div class="col-xs-4 img-hold"><img class="port-img" src="{{portImages[7].loc}}" title="Photographer: {{portImages[7].photog}}" ng-click="portNav(7);" /></div>
             </div>
         </section>
     </section>
@@ -80,19 +81,3 @@
         </section>
     </section>
 </div>
-
-<!-- Photo Slider Code 
-            <script type="text/ng-template" id="photoSlider">
-                <div class="photo-slider">
-                    <img class="slide-image" ng-repeat="img in portImages" src="{{img.loc}}" title="Photographer: {{img.photog}}" ng-hide="!isCurrentSlideIndex($index)" ng-swipe-left="prevSlide();" ng-swipe-right="nextSlide();" />
-                    <nav class="slide-nav">
-                        <div class="dots-wrap">
-                            <ul class="dots">
-                                <li class="dot" ng-repeat="img in portImages">
-                                    <a ng-class="{'active':isCurrentSlideIndex($index)}" ng-click="setCurrentSlideIndex($index);">Photographer: {{img.photog}}</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-           </script>-->
