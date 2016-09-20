@@ -18,12 +18,17 @@ body {
     width: 100%;
     background-color: #fff;
     text-align: center; }
-    body .title h1 {
-      font-family: Rakkas, cursive;
-      font-size: 62pt;
-      color: #234567; }
+    body .title h1 .title-amelia {
+      font-family: Rakkas, cursive !important;
+      font-size: 62pt !important;
+      color: #234567 !important; }
     body .title h2 {
-      font-size: 18px;
+      font-size: 25pt;
+      margin: 0 auto 2px auto;
+      font-family: Rakkas, cursive;
+      color: #000; }
+    body .title .title-port {
+      font-size: 25pt;
       margin: 0 auto 2px auto;
       font-family: Rakkas, cursive;
       color: #000; }
@@ -58,27 +63,49 @@ body {
       top: 0;
       right: 0;
       margin: 0.5em 0.5em 0 0;
+      font-size: 20pt;
       color: #4e4747; }
+      body .title .fa-lightbulb-o:hover {
+        cursor: pointer; }
   body .full-port {
     width: 100%; }
     body .full-port .photo-slider {
       width: 100%;
-      height: 26em;
+      height: 36em;
       display: flex;
       justify-content: center;
       margin: 0.5em auto; }
-      @media screen and (min-width: 780px) {
+      @media screen and (min-width: 453px) {
         body .full-port .photo-slider {
-          height: 30em; } }
+          height: 59em; } }
+      @media screen and (max-width: 453px) and (orientation: landscape) {
+        body .full-port .photo-slider {
+          height: 26em; } }
+      @media screen and (min-width: 453px) and (orientation: landscape) {
+        body .full-port .photo-slider {
+          height: 25em; } }
+      @media screen and (min-width: 768px) and (orientation: landscape) {
+        body .full-port .photo-slider {
+          height: 40em; } }
       body .full-port .photo-slider .fa-arrow-left {
         float: left;
         z-index: 1003;
         align-self: center;
-        color: #000; }
+        color: #000;
+        font-size: 16pt; }
+        body .full-port .photo-slider .fa-arrow-left:hover {
+          cursor: pointer; }
       body .full-port .photo-slider .fa-arrow-right {
         float: right;
         z-index: 1003;
         align-self: center;
+        color: #000;
+        font-size: 16pt; }
+        body .full-port .photo-slider .fa-arrow-right:hover {
+          cursor: pointer; }
+      body .full-port .photo-slider .img-cap {
+        position: relative;
+        width: 100%;
         color: #000; }
       body .full-port .photo-slider .img-hold {
         margin: 0.5em auto;
@@ -128,6 +155,11 @@ body {
                 -webkit-transition: background-color 0.25s, border-color 0.25s;
                 -moz-transition: background-color 0.25s, border-color 0.25s;
                 transition: background-color 0.25s, border-color 0.25s; }
+    body .full-port .img-cap {
+      width: 100%;
+      color: #000;
+      text-align: right;
+      padding: 0 3em 0 3em; }
     body .full-port .port-container .img-hold {
       margin: 0.5em auto;
       width: 100%;
@@ -162,14 +194,15 @@ body {
             right: 0; } }
     body .port .port-head .arrow-holder i {
       font-size: 29pt;
-      line-height: 1em; }
+      line-height: 1em;
+      color: #234567; }
     @media screen and (min-width: 780px) {
       body .port .port-head .arrow-holder {
         display: none; } }
   body .port .port-img-block {
     background-color: #fff; }
     body .port .port-img-block .img-hold {
-      margin: 0.5em auto; }
+      padding: 0.5em 0.25em 0.5em 0.25em; }
       body .port .port-img-block .img-hold .port-img {
         border-radius: 3em;
         max-width: 100%;
@@ -194,7 +227,8 @@ body {
             right: 0; } }
     body .blog .blog-head .arrow-holder i {
       font-size: 29pt;
-      line-height: 1em; }
+      line-height: 1em;
+      color: #234567; }
     @media screen and (min-width: 780px) {
       body .blog .blog-head .arrow-holder {
         display: none; } }
@@ -214,7 +248,8 @@ body {
       text-indent: 2em;
       margin: 0 auto;
       padding: 0 34px;
-      color: #000; }
+      color: #000;
+      font-size: 12pt; }
   body .foot {
     text-align: center;
     background-color: #e0e0eb; }

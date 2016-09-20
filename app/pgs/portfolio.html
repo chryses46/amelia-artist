@@ -1,7 +1,6 @@
 <section class="title" id="home">
-    <h1>Amelia</h1>
-    <h2>Model Portfolio </h2>
-    <h3><a href="#/home">Home</a></h3>
+    <h1><a href="#/home" class="title-amelia">Amelia</a></h1>
+    <h2 class="title-port">Model Portfolio </h2>
     <i class="fa fa-lightbulb-o" ng-click="changeStyle();"/>
     <div>
         <ul>
@@ -24,6 +23,9 @@
             <img class="port-img" ng-repeat="img in portImages" ng-src="{{img.loc}}" title="Photographer: {{img.photog}}" ng-hide="!isCurrentSlideIndex($index)" />
         </div>
         <i class="fa fa-arrow-right" ng-click="nextSlide();" />
+    </div>
+    <div class="img-cap">
+        <p ng-repeat="img in portImages" ng-hide="!isCurrentSlideIndex($index)">Photographer: {{img.photog}}</p>
     </div>
     <div>
         <!-- Compelted once images are chosen
