@@ -1,13 +1,11 @@
 angular.module('amelia')
-    .controller('HomeController', function($stateParams, $location, $rootScope, $scope, ngDialog) {
+    .controller('HomeController', function($stateParams, $location, $rootScope, $scope, ngDialog, smoothScroll) {
 
         
         if ($stateParams.id > 0 ){
             $scope.currentIndex = $stateParams.id;
             console.log($stateParams.id);
         }else $scope.currentIndex = 0;
-        
-        console.log($scope.currentIndex)
 
         //Array of imgs for Portfolio Section
         $scope.portImages = [{
@@ -73,19 +71,23 @@ angular.module('amelia')
         $scope.changeStyle = function(){
             if ($('#cssId').attr('href') == 'assets/css/style.css'){
                 $('#cssId').attr('href', 'assets/css/bright-style.css');
-                console.log($('#cssId').attr('href'));
+                console.log("Changed style sheet to: " + $('#cssId').attr('href'));
             } else {
                 $('#cssId').attr('href', 'assets/css/style.css');
-                console.log($('#cssId').attr('href'));
+                console.log( "Changed style sheet to: " + $('#cssId').attr('href'));
             }
             
         }
 
-         //Scroll to specific div
-        $scope.gotoAnchor = function(div_id) {
-            var old = $location.hash();
-            $location.hash(div_id);
-            anchorSmoothScroll.scrollTo(div_id);
+         //Scroll to 'home' id
+        $scope.goToTop = function() {
+            var home = document.getElementById('home'),
+                old = $location.hash(),
+                options = {
+                    duration: 300
+                };
+            $location.hash(home);
+            smoothScroll(home);
             $location.hash(old);
         };
 

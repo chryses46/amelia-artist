@@ -22,6 +22,14 @@ $icon-font: 23pt
   top: 0
   right: 0
   margin: .5em .5em 0 0
+  font-size: 20pt
+
+=slider-arrow
+  z-index: 1003
+  align-self: center
+  color: #000
+  font-size: 15pt
+
 
 =head-div
   text-align: center
@@ -33,6 +41,7 @@ $icon-font: 23pt
 =head-i
   font-size: 29pt
   line-height: 1em
+  color: #234567
 
 =head-h1
   position: relative
@@ -77,9 +86,10 @@ body
     text-align: center
 
     h1
-      font-family: $Rakkas
-      font-size: 62pt
-      color: #234567
+      .title-amelia
+        font-family: $Rakkas !important
+        font-size: 62pt!important
+        color: #234567 !important
 
     h2
       font-size: 18px
@@ -136,15 +146,11 @@ body
 
       .fa-arrow-left
         float: left
-        z-index: 1003
-        align-self: center
-        color: #000
+        +slider-arrow
 
       .fa-arrow-right
         float: right
-        z-index: 1003
-        align-self: center
-        color: #000
+        +slider-arrow
 
       .img-hold
         margin: .5em auto
@@ -239,7 +245,7 @@ body
       background-color: #fff
 
       .img-hold
-        margin: .5em auto
+        padding:  .5em .25em .5em .25em
 
         .port-img
           border-radius: 3em

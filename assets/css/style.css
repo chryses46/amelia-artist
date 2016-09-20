@@ -18,10 +18,10 @@ body {
     width: 100%;
     background-color: #4e4747;
     text-align: center; }
-    body .title h1 {
-      font-family: Rakkas, cursive;
-      font-size: 62pt;
-      color: #234567; }
+    body .title h1 .title-amelia {
+      font-family: Rakkas, cursive !important;
+      font-size: 62pt !important;
+      color: #234567 !important; }
     body .title h2 {
       font-size: 18px;
       margin: 0 auto 2px auto;
@@ -58,6 +58,7 @@ body {
       top: 0;
       right: 0;
       margin: 0.5em 0.5em 0 0;
+      font-size: 20pt;
       color: #fff; }
   body .full-port {
     width: 100%; }
@@ -74,12 +75,14 @@ body {
         float: left;
         z-index: 1003;
         align-self: center;
-        color: #fff; }
+        color: #fff;
+        font-size: 15pt; }
       body .full-port .photo-slider .fa-arrow-right {
         float: right;
         z-index: 1003;
         align-self: center;
-        color: #fff; }
+        color: #fff;
+        font-size: 15pt; }
       body .full-port .photo-slider .img-hold {
         margin: 0.5em auto;
         width: 100%;
@@ -162,14 +165,15 @@ body {
             right: 0; } }
     body .port .port-head .arrow-holder i {
       font-size: 29pt;
-      line-height: 1em; }
+      line-height: 1em;
+      color: #000; }
     @media screen and (min-width: 780px) {
       body .port .port-head .arrow-holder {
         display: none; } }
   body .port .port-img-block {
     background-color: #4e4747; }
     body .port .port-img-block .img-hold {
-      margin: 0.5em auto; }
+      padding: 0.5em 0.25em 0.5em 0.25em; }
       body .port .port-img-block .img-hold .port-img {
         border-radius: 3em;
         max-width: 100%;
@@ -194,7 +198,8 @@ body {
             right: 0; } }
     body .blog .blog-head .arrow-holder i {
       font-size: 29pt;
-      line-height: 1em; }
+      line-height: 1em;
+      color: #000; }
     @media screen and (min-width: 780px) {
       body .blog .blog-head .arrow-holder {
         display: none; } }

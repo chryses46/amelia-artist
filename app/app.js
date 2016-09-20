@@ -1,4 +1,4 @@
 (function(){
 	'use strict';
 	angular
-		.module('amelia', ['ui.router', 'ngTouch', 'ngAnimate', 'ngDialog'])})();
+		.module('amelia', ['ui.router', 'ngTouch', 'ngAnimate', 'ngDialog', 'smoothScroll'])})();
